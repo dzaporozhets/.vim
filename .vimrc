@@ -4,6 +4,8 @@ filetype plugin indent on
 autocmd vimenter * NERDTree
 set autochdir
 set nohidden
+set number
+set hlsearch
 map <Tab> <C-W>W:cd %:p:h<CR>:<CR>
 map <F2> :NERDTree<CR>
 map <F5> :w<CR>
