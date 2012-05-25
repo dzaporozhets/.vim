@@ -12,3 +12,4 @@ map <F2> :NERDTree<CR>
 map <F5> :w<CR>
 call s:initVariable("g:NERDTreeMapToggleHidden", "I")
 colorscheme tango2
+inoremap <Nul> <C-n>
