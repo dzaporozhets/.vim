@@ -15,3 +15,7 @@ call s:initVariable("g:NERDTreeMapToggleHidden", "I")
 colorscheme tango2
 inoremap <Nul> <C-n>
 let mapleader = ","
+set noswapfile
+:set tabstop=2
+:set shiftwidth=2
+:set expandtab
