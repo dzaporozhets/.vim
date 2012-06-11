@@ -16,6 +16,15 @@ colorscheme tango2
 inoremap <Nul> <C-n>
 let mapleader = ","
 set noswapfile
-:set tabstop=2
-:set shiftwidth=2
-:set expandtab
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+"visual search mappings
+function! s:VSetSearch()
+  let temp = @@
+  norm! gvy
+  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
+  let @@ = temp
+endfunction
+vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
