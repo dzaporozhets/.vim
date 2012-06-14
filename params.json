@@ -1,0 +1,1 @@
+{"name":".vim","body":".vim\r\n====\r\n\r\n## Install\r\n\r\n1. Clone git repository:\r\n\r\n    `git clone git@github.com:randx/.vim.git $HOME/.vim`\r\n\r\n2. Create a symbol link to vimrc:\r\n\r\n    `ln -s $HOME/.vim/.vimrc $HOME/.vimrc` \r\n","tagline":"Vim For Rails","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
