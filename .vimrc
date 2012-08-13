@@ -28,3 +28,13 @@ function! s:VSetSearch()
   let @@ = temp
 endfunction
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
+
+
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+autocmd FileType php,ruby,python,erb,haml,js,coffesript,rake,rb autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
