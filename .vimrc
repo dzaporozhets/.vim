@@ -37,4 +37,4 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
-autocmd FileType php,ruby,python,erb,haml,js,coffesript,rake,rb autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType php,ruby,cucumber,scss,sass,css,python,erb,haml,js,coffesript,rake,rb autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
