@@ -38,3 +38,8 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType php,ruby,cucumber,scss,sass,css,python,erb,haml,js,coffesript,rake,rb autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+
+" Vim system buffer
+"sudo apt-get install vim-gtk
+vmap <F2> "+y<CR>
