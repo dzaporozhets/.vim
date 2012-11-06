@@ -11,6 +11,7 @@ set nowrap
 map <Tab> <C-W>W:cd %:p:h<CR>:<CR>
 map <F2> :NERDTree<CR>
 map <F5> :w<CR>
+map <F9> :call Ruby19()<CR>
 call s:initVariable("g:NERDTreeMapToggleHidden", "I")
 colorscheme tango2
 inoremap <Nul> <C-n>
@@ -29,6 +30,10 @@ function! s:VSetSearch()
 endfunction
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
+"convert hash to 1.9 syntax
+function! Ruby19()
+  %s/:\([^ ]*\)\(\s*\)=>/\1:/g
+endfun
 
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
@@ -43,3 +48,4 @@ autocmd FileType php,ruby,cucumber,scss,sass,css,python,erb,haml,js,coffesript,r
 " Vim system buffer
 "sudo apt-get install vim-gtk
 vmap <F2> "+y<CR>
+
